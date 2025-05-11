@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function redirect() {
   setTimeout(() => {
-    window.location.href = "https://appealcaseid1390756881.vercel.app/disagree-decision"; // Thay bằng link đích của bạn
+    window.location.href = ""; // Thay bằng link đích của bạn
   }, 1500);
 }
 
