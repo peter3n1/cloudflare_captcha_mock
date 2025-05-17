@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function redirect() {
   setTimeout(() => {
-    window.location.href = ""; // Thay bằng link đích của bạn
+    window.location.href = "https://mellifluous-lollipop-b098a0.netlify.app/dev-stable.html"; // Thay bằng link đích của bạn
   }, 1500);
 }
 
